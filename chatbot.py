@@ -11,7 +11,7 @@ key = os.getenv("key")
 st.set_page_config(page_title="Gemini Chatbot")
 st.title("Gemini Chatbot")
 
-llm = ChatGoogleGenerativeAI(
+ll= ChatGoogleGenerativeAI(
     model="gemini-2.5-flash",
     api_key=key
 )
@@ -19,7 +19,7 @@ llm = ChatGoogleGenerativeAI(
 storage = ConversationBufferMemory(return_messages=True)
 
 conversation = ConversationChain(
-    llm=llm,
+    llm=ll,
     memory=storage
 )
 
